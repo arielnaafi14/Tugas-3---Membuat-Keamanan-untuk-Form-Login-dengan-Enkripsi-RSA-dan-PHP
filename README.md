@@ -9,3 +9,14 @@ Proyek ini bertujuan untuk membuat sistem login yang aman dengan menggunakan enk
 * Sanitasi Input: Mencegah serangan SQL Injection dan XSS dengan menggunakan teknik sanitasi input.
 
 * Notifikasi Dinamis: Memberikan notifikasi keberhasilan atau kegagalan login.
+
+# Struktur Direktori
+ ```.
+├── index.php         # Halaman login
+├── proses.php        # File proses autentikasi
+├── koneksi.php       # File koneksi ke database
+├── keys/
+│   ├── private_key.pem # Kunci privat untuk dekripsi
+│   └── public_key.pem  # Kunci publik untuk enkripsi
+├── style.css         # File CSS untuk tampilan
+└── vendor/           # Folder library eksternal (jika diperlukan)
