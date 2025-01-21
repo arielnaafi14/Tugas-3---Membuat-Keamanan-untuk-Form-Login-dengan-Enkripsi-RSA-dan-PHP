@@ -22,52 +22,52 @@ Proyek ini bertujuan untuk membuat sistem login yang aman dengan menggunakan enk
 └── vendor/           # Folder library eksternal (jika diperlukan)
 ```
 # Penjelasan File
-1. index.php
+**1. index.php**
 
 Halaman utama tempat pengguna memasukkan username dan password.
 
-* Input username dan password.
+- Input username dan password.
 
-* Mengirimkan data ke server menggunakan metode POST.
+- Mengirimkan data ke server menggunakan metode POST.
 
-* Menampilkan notifikasi jika login gagal atau form tidak lengkap.
+- Menampilkan notifikasi jika login gagal atau form tidak lengkap.
 
-* Dilakukan sanitasi input untuk mencegah XSS.
+- Dilakukan sanitasi input untuk mencegah XSS.
 
-2. proses.php
+**2. proses.php**
 
 File untuk memproses data login dan memvalidasi pengguna.
 
-* Proses Enkripsi dan Dekripsi:
+- Proses Enkripsi dan Dekripsi:
 
  - Password yang diterima dienkripsi dengan RSA menggunakan kunci publik.
 
  - Di server, password yang dienkripsi didekripsi menggunakan kunci privat.
 
-* Validasi Database:
+- Validasi Database:
 
- * Data username dan password dikoordinasikan dengan database.
+ - Data username dan password dikoordinasikan dengan database.
 
- * Jika valid, pengguna dianggap berhasil login.
+ - Jika valid, pengguna dianggap berhasil login.
 
-* Sanitasi Input:
+- Sanitasi Input:
 
- * Semua input dari pengguna disanitasi menggunakan fungsi bawaan PHP seperti mysqli_real_escape_string untuk SQL Injection dan htmlspecialchars untuk XSS.
+ - Semua input dari pengguna disanitasi menggunakan fungsi bawaan PHP seperti mysqli_real_escape_string untuk SQL Injection dan htmlspecialchars untuk XSS.
 
-* Notifikasi:
+- Notifikasi:
 
- * Mengatur sesi untuk menyimpan notifikasi, seperti "Berhasil Login" atau "Gagal Login".
+ - Mengatur sesi untuk menyimpan notifikasi, seperti "Berhasil Login" atau "Gagal Login".
 
-3. koneksi.php
+**3. koneksi.php**
 
 Mengatur koneksi dengan database menggunakan MySQLi.
 
-* Mendefinisikan variabel mysqli_connect() dengan parameter host, username, password, dan nama database.
+- Mendefinisikan variabel mysqli_connect() dengan parameter host, username, password, dan nama database.
 
-* Menyediakan koneksi yang digunakan oleh file proses.php.
+- Menyediakan koneksi yang digunakan oleh file proses.php.
 
-4. Folder keys/
+**4. Folder keys/**
 
-* private_key.pem: Kunci privat RSA yang digunakan untuk mendekripsi password di server.
+- private_key.pem: Kunci privat RSA yang digunakan untuk mendekripsi password di server.
 
-* public_key.pem: Kunci publik RSA yang digunakan untuk mengenkripsi password di sisi klien.
+- public_key.pem: Kunci publik RSA yang digunakan untuk mengenkripsi password di sisi klien.
