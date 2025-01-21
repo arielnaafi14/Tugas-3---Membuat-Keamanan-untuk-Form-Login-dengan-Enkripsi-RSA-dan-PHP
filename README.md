@@ -3,6 +3,9 @@ Proyek ini bertujuan untuk membuat sistem login yang aman dengan menggunakan enk
 
 # Fitur
 -Keamanan dengan RSA: Password dienkripsi menggunakan kunci publik di sisi klien dan didekripsi dengan kunci privat di sisi server.
+
 -Validasi Input: Sistem memvalidasi apakah username dan password yang dimasukkan cocok dengan data di database.
+
 -Sanitasi Input: Mencegah serangan SQL Injection dan XSS dengan menggunakan teknik sanitasi input.
+
 -Notifikasi Dinamis: Memberikan notifikasi keberhasilan atau kegagalan login.
