@@ -71,3 +71,34 @@ Mengatur koneksi dengan database menggunakan MySQLi.
 - private_key.pem: Kunci privat RSA yang digunakan untuk mendekripsi password di server.
 
 - public_key.pem: Kunci publik RSA yang digunakan untuk mengenkripsi password di sisi klien.
+
+# Penjelasan Cara Kerja
+
+**Pengguna Masuk ke Halaman Login (index.php):**
+
+- Mengisi username dan password pada form.
+
+- Data dikirim ke server melalui metode POST ke file proses.php.
+
+**Proses Enkripsi RSA:**
+
+- Di klien, password dienkripsi menggunakan kunci publik RSA (public_key.pem).
+
+- Password yang telah dienkripsi dikirim ke server.
+
+**Proses Dekripsi RSA:**
+
+- Di server, password yang diterima didekripsi menggunakan kunci privat RSA (private_key.pem).
+
+**Validasi Database:**
+
+- Data username dan password yang telah didekripsi dibandingkan dengan data yang ada di database.
+
+- Jika cocok, login berhasil.
+
+- Jika tidak cocok, pengguna diarahkan kembali ke halaman login dengan notifikasi "Gagal Login".
+
+**Sanitasi Input:**
+
+- Setiap input dari pengguna disanitasi sebelum diproses lebih lanjut untuk mencegah SQL Injection dan XSS.
+  
