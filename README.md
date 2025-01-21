@@ -40,9 +40,9 @@ File untuk memproses data login dan memvalidasi pengguna.
 
 * Proses Enkripsi dan Dekripsi:
 
- * Password yang diterima dienkripsi dengan RSA menggunakan kunci publik.
+ - Password yang diterima dienkripsi dengan RSA menggunakan kunci publik.
 
- * Di server, password yang dienkripsi didekripsi menggunakan kunci privat.
+ - Di server, password yang dienkripsi didekripsi menggunakan kunci privat.
 
 * Validasi Database:
 
