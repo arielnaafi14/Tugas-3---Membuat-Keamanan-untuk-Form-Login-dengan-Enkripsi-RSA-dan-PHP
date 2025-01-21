@@ -102,3 +102,7 @@ Mengatur koneksi dengan database menggunakan MySQLi.
 
 - Setiap input dari pengguna disanitasi sebelum diproses lebih lanjut untuk mencegah SQL Injection dan XSS.
   
+# Kontribusi Tim
+- Backend     : Zafi Zunaidi Aziz
+- Penguji     : Adimas Alif Priarta
+- Dokumentasi : Muhammad Ariel Naafi'
